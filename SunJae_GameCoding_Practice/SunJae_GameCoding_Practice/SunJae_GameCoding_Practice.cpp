@@ -7,23 +7,7 @@ using namespace std;
 // short  2
 // int    4
 // long long   8
-
 // 문자 char , string
-
-// ==
-// !=
-// <
-// <=
-// >
-// >=
-
-// ! not
-// && and
-// || or
-
-// if ( ) { }
-// if - else
-
 
 
 int hp;
@@ -31,6 +15,10 @@ int choice;
 
 int main()
 {
+
+	// 비교연산 : == , != , < , <= , > , >=
+	// 논리 연산 : ! , && , ||
+
 	hp = 100;
 
 	if (hp > 0)
@@ -45,9 +33,7 @@ int main()
 
 
 
-	// if - else if - else
-
-	// 0 가위  1 바위  2 보
+	// 분기문 : if - else if - else
 
 	choice = 1;
 	
@@ -67,10 +53,12 @@ int main()
 	{
 		cout << "오류" << endl;
 	}
-	
 
 
-	// switch - case - break
+
+
+	// 분기문 : switch -> cace - default
+
 	choice = 3;
 
 	switch (choice)
@@ -87,5 +75,15 @@ int main()
 		default :
 			cout << "오류" << endl;
 			break;
+	}
+
+
+
+
+	// 반복문 : for , while
+
+	for (size_t i = 0; i < 3; i++)
+	{
+
 	}
 }
