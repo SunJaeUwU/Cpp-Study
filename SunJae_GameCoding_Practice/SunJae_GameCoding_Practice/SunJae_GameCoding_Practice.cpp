@@ -23,18 +23,69 @@ using namespace std;
 
 // if ( ) { }
 // if - else
-// if - else if - else
+
+
 
 int hp;
+int choice;
 
 int main()
 {
 	hp = 100;
 
-	if (hp <= 0)
+	if (hp > 0)
 	{
-		// 플레이어 사망
-		cout << "죽었습니다" << endl;
-		cout << "살았습니다" << endl;
+		cout << "살았습니다" << endl;	// 플레이어 생존
+	}
+	else
+	{
+		cout << "죽었습니다" << endl;   // 플레이어 사망
+	}
+	
+
+
+
+	// if - else if - else
+
+	// 0 가위  1 바위  2 보
+
+	choice = 1;
+	
+	if (choice == 0)
+	{
+		cout << "가위를 냈습니다" << endl;
+	}
+	else if (choice == 1)
+	{
+		cout << "바위를 냈습니다" << endl;
+	}
+	else if (choice == 2)
+	{
+		cout << "보를 냈습니다" << endl;
+	}
+	else
+	{
+		cout << "오류" << endl;
+	}
+	
+
+
+	// switch - case - break
+	choice = 3;
+
+	switch (choice)
+	{
+		case 0:
+			cout << "가위를 냈습니다" << endl;
+			break;
+		case 1:
+			cout << "바위를 냈습니다" << endl;
+			break;
+		case 2:
+			cout << "보를 냈습니다" << endl;
+			break;
+		default :
+			cout << "오류" << endl;
+			break;
 	}
 }
