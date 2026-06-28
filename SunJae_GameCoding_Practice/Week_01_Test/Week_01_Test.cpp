@@ -4,6 +4,8 @@ using namespace std;
 
 enum SRP { Scissors = 1, Rock = 2, Paper = 3 };
 
+
+
 int main()
 {
 
@@ -173,8 +175,6 @@ int main()
 			cout << "오류입니다." << endl;
 			break;
 		}
-
-		cout << RandomNum;
 
 		roundnum++;
 
