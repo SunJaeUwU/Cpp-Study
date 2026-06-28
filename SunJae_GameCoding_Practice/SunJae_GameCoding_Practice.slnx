@@ -3,5 +3,6 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="SunJae_GameCoding_Practice/SunJae_GameCoding_Practice.vcxproj" />
+  <Project Path="SunJae_GameCoding_Practice/SunJae_GameCoding_Practice.vcxproj" Id="7fd4f65a-9147-419d-8a1b-75693e540701" />
+  <Project Path="Week_01_Test/Week_01_Test.vcxproj" Id="9421562c-71e0-42c1-9f3e-7bc294b9c26a" />
 </Solution>

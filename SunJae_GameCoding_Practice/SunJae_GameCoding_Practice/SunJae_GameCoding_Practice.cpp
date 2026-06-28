@@ -19,24 +19,24 @@ int main()
 	// 비교연산 : == , != , < , <= , > , >=
 	// 논리 연산 : ! , && , ||
 
-	hp = 100;
+	//hp = 100;
 
-	if (hp > 0)
-	{
-		cout << "살았습니다" << endl;	// 플레이어 생존
-	}
-	else
-	{
-		cout << "죽었습니다" << endl;   // 플레이어 사망
-	}
-	
+	//if (hp > 0)
+	//{
+	//	cout << "살았습니다" << endl;	// 플레이어 생존
+	//}
+	//else
+	//{
+	//	cout << "죽었습니다" << endl;   // 플레이어 사망
+	//}
+
 
 
 
 	// 분기문 : if - else if - else
 
-	choice = 1;
-	
+	/*choice = 1;
+
 	if (choice == 0)
 	{
 		cout << "가위를 냈습니다" << endl;
@@ -52,38 +52,55 @@ int main()
 	else
 	{
 		cout << "오류" << endl;
-	}
+	}*/
 
 
 
 
 	// 분기문 : switch -> cace - default
 
-	choice = 3;
+	/*choice = 3;
 
 	switch (choice)
 	{
-		case 0:
-			cout << "가위를 냈습니다" << endl;
-			break;
-		case 1:
-			cout << "바위를 냈습니다" << endl;
-			break;
-		case 2:
-			cout << "보를 냈습니다" << endl;
-			break;
-		default :
-			cout << "오류" << endl;
-			break;
-	}
+	case 0:
+		cout << "가위를 냈습니다" << endl;
+		break;
+	case 1:
+		cout << "바위를 냈습니다" << endl;
+		break;
+	case 2:
+		cout << "보를 냈습니다" << endl;
+		break;
+	default:
+		cout << "오류" << endl;
+		break;
+	}*/
 
 
 
 
-	// 반복문 : for , while
+	// 반복문 : for , while , do while
 
-	for (int i = 0; i < 3; i++)
+	int cnt = 0;
+
+	while (cnt < 5)
 	{
+		cout << "Hello World" << endl;
+		cnt++;
 
+		if (cnt == 3)
+			break;
 	}
+	
+
+
+	for (int i = 0; i < 10; i++)
+	{
+		if (i >= 7)
+			break;
+
+		cout << "Hello World" << endl;
+	}
+
 }
