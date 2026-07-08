@@ -22,35 +22,37 @@ using namespace std;
 //
 //}
 
-//void Test1();
-//int Test2(int a, int b);
-//
-//void Test1()
-//{
-//	int a = 100;
-//	int b = 20;
-//
-//	int res = Test2(a, b);
-//
-//	cout << "결과값 : " << res << endl;
-//}
-//
-//
-//int Test2(int a, int b)
-//{
-//	int sum = a + b;
-//	return sum;
-//}
-//
-//
-//int main()
-//{
-//	Test1();
-//	return 0;
-//}
+/*
+void Test1();
+int Test2(int a, int b);
+
+void Test1()
+{
+	int a = 100;
+	int b = 20;
+
+	int res = Test2(a, b);
+
+	cout << "결과값 : " << res << endl;
+}
+
+
+int Test2(int a, int b)
+{
+	int sum = a + b;
+	return sum;
+}
+
+
+int main()
+{
+	Test1();
+	return 0;
+}*/
 
 
 
+/*
 int Test(int a)
 {
 	int c = a + 5;
@@ -65,4 +67,23 @@ int main()
 	cout << res;
 
 	return 0;
+}
+*/
+
+
+
+int AddHP(int hp, int value)
+{
+	hp += value;
+
+	return hp;
+}
+
+int main()
+{
+	int hp = 100;
+
+	AddHP(hp, 20);
+
+	cout << hp << endl;
 }
