@@ -18,6 +18,4 @@ int main()
     int mp = 200;
 
    
-
-
 }
