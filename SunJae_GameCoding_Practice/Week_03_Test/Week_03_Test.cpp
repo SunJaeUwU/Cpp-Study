@@ -185,5 +185,17 @@ void EnterBattle()
 		int damage = attack - MT_defence;
 		if (damage < 0)
 			damage = 0;
+
+		// 선빵
+		MT_hp -= damage;
+		if (MT_hp < 0)
+			MT_hp = 0;
+
+		cout << "몬스터 남은 체력 : " << MT_hp << endl;
+
+		if (MT_hp == 0)
+		{
+			cout << "몬스터를 처치했습니다!" << endl;
+		}
 	}
 }
