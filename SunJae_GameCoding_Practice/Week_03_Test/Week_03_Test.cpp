@@ -23,6 +23,7 @@ void SelectPlayer();
 void EnterField();
 void CreateRandomMonster();
 void EnterBattle();
+void WaitForNextKey();
 
 
 PlayerType playerType;
@@ -92,6 +93,7 @@ void SelectPlayer()
 		int choice;
 		cin >> choice;
 
+		system("cls");
 
 		if (choice == PT_Warrior)
 		{
@@ -126,11 +128,13 @@ void SelectPlayer()
 
 void EnterField()
 {
+	system("cls");
+
 	cout << "------------------------------" << endl;
 	cout << " 필드에 입장했습니다! " << endl;
 	cout << "------------------------------" << endl;
 
-	cout << "[Player] Hp : " << hp << " / ATT : " << attack << " / DEF : " << defence << endl;
+	cout << "[Player] Hp : " << hp << " / ATT : " << attack << " / DEF : " << defence << endl << endl;
 
 	// 몹 스폰
 	CreateRandomMonster();
@@ -147,6 +151,11 @@ void EnterField()
 		if (input == 1)
 		{
 			EnterBattle();
+
+			if (hp == 0)
+				return;
+			else if (MT_hp == 0)
+				return;
 		}
 		else
 		{
@@ -162,19 +171,19 @@ void CreateRandomMonster()
 	switch (randomChoice)
 	{
 	case MT_Slime:
-		cout << " 슬라임 생성중 . . . ! ( HP:30 / ATT:2 / DEF:0)" << endl;
+		cout << "슬라임 생성중 . . . ! ( HP:30 / ATT:2 / DEF:0)" << endl;
 		MT_hp = 30;
 		MT_attack = 2;
 		MT_defence = 0;
 		break;
 	case MT_Orc:
-		cout << " 오크 생성중 . . . ! ( HP:30 / ATT:2 / DEF:0)" << endl;
+		cout << "오크 생성중 . . . ! ( HP:40 / ATT:10 / DEF:3)" << endl;
 		MT_hp = 40;
 		MT_attack = 10;
 		MT_defence = 3;
 		break;
 	case MT_Skeleton:
-		cout << " 스켈레톤 생성중 . . . ! ( HP:30 / ATT:2 / DEF:0)" << endl;
+		cout << "스켈레톤 생성중 . . . ! ( HP:80 / ATT:15 / DEF:5)" << endl;
 		MT_hp = 80;
 		MT_attack = 15;
 		MT_defence = 5;
@@ -199,7 +208,8 @@ void EnterBattle()
 
 		if (MT_hp == 0)
 		{
-			cout << "몬스터를 처치했습니다!" << endl;
+			cout << "몬스터를 처치했습니다!" << endl << endl;
+			WaitForNextKey();
 			return;	
 		}
 
@@ -217,7 +227,19 @@ void EnterBattle()
 		if (hp == 0)
 		{
 			cout << "당신은 사망했습니다 . . . Game Over" << endl;
-				return;
+			WaitForNextKey();
+			return;
 		}
 	}
+}
+
+void WaitForNextKey()
+{
+	cout << "계속하려면 1을 눌러주세요" << endl;
+	cout << "> ";
+
+	int input;
+	cin >> input;
+
+	system("cls");
 }
