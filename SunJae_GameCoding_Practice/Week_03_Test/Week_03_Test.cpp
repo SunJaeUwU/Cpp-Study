@@ -44,7 +44,6 @@ int main()
 {
 	srand(time(0));
 	EnterLobby();
-	return 0;
 }
 
 
@@ -83,17 +82,17 @@ void EnterLobby()
 
 void SelectPlayer()
 {
-	cout << "------------------------------" << endl;
-	cout << " 플레이어 직업을 선택하세요! " << endl;
-	cout << "(1) 전사 (2) 궁수 (3) 마법사" << endl;
-	cout << "선택: ";
-
-	int choice;
-	cin >> choice;
-
-
 	while (true)
 	{
+		cout << "------------------------------" << endl;
+		cout << " 플레이어 직업을 선택하세요! " << endl;
+		cout << "(1) 전사 (2) 궁수 (3) 마법사" << endl;
+		cout << "선택: ";
+
+		int choice;
+		cin >> choice;
+
+
 		if (choice == PT_Warrior)
 		{
 			cout << "기사 생성중 . . . " << endl;
@@ -206,5 +205,19 @@ void EnterBattle()
 
 		//몬스터의 반격
 		damage = MT_attack - defence;
+		if (damage < 0)
+			damage = 0;
+
+		hp -= damage;
+		if (hp < 0)
+			hp = 0;
+
+		cout << "플레이어의 남은 체력 : " << hp << endl;
+
+		if (hp == 0)
+		{
+			cout << "당신은 사망했습니다 . . . Game Over" << endl;
+				return;
+		}
 	}
 }
