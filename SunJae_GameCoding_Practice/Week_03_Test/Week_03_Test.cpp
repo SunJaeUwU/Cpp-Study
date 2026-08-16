@@ -47,6 +47,11 @@ int main()
 	return 0;
 }
 
+
+
+
+
+
 void EnterLobby()
 {
 	while (true)
@@ -196,6 +201,10 @@ void EnterBattle()
 		if (MT_hp == 0)
 		{
 			cout << "몬스터를 처치했습니다!" << endl;
+			return;	
 		}
+
+		//몬스터의 반격
+		damage = MT_attack - defence;
 	}
 }
