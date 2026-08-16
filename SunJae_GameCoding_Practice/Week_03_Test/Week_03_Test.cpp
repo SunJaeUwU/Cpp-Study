@@ -245,4 +245,5 @@ void WaitForNextKey()
 	cin >> input;
 
 	system("cls");
+
 }
